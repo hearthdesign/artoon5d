@@ -80,7 +80,7 @@ EPIC 6 |	Stability & Protection<br>
 
 ## Colors and Typography
 
-The color palette of Artoon2D Blog consists of pastel and vibrant tones, carefully selected to create a friendly and playful atmosphere. These colors are limited in number to ensure visual consistency and are associated with a family- and kids-friendly design, enhancing readability and creating an inviting experience for all visitors.
+The color palette of Artoon5D Blog consists of pastel and vibrant tones, carefully selected to create a friendly and playful atmosphere. These colors are limited in number to ensure visual consistency and are associated with a family- and kids-friendly design, enhancing readability and creating an inviting experience for all visitors.
 
 The typography complements this approach with Comic Sans MS, using uppercase headings for emphasis and a light, approachable style for body text and lists.
 
@@ -123,7 +123,7 @@ artoon5d/
 │   │   └── __init__.py
 │   │
 │   ├── templates/
-│   │   └── artoon2d_blog/
+│   │   └── artoon5d_blog/
 │   │       ├── base.html
 │   │       ├── home.html
 │   │       ├── post_list.html
@@ -138,7 +138,7 @@ artoon5d/
 │   │           ├── like_button.html
 │   │
 │   ├── static/
-│   │   └── artoon2d_blog/
+│   │   └── artoon5d_blog/
 │   │       ├── css/
 │   │       │   └── main.css
 │   │       ├── js/
