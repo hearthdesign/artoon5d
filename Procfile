@@ -1,1 +1,1 @@
-web: gunicorn artoon2d.wsgi
+web: gunicorn artoon5d.wsgi
