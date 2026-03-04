@@ -38,7 +38,7 @@ def robots_txt(request):
 @method_decorator(cache_page(60 * 5), name='dispatch')
 class PostListView(ListView):
     model = Post
-    template_name = 'artoon2d_blog/post_list.html'
+    template_name = 'artoon5d_blog/post_list.html'
     context_object_name = 'posts'
     paginate_by = 5
 
@@ -104,7 +104,7 @@ class PostListView(ListView):
 # ---------------------------------------------------------------------
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'artoon2d_blog/post_detail.html'
+    template_name = 'artoon5d_blog/post_detail.html'
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
 
@@ -147,7 +147,7 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content', 'image', 'category', 'tags', 'theme']
-    template_name = 'artoon2d_blog/post_form.html'
+    template_name = 'artoon5d_blog/post_form.html'
     def get_success_url(self):
         return self.object.get_absolute_url()
 
@@ -159,7 +159,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['title', 'content', 'image', 'category', 'tags', 'theme']
-    template_name = 'artoon2d_blog/post_form.html'
+    template_name = 'artoon5d_blog/post_form.html'
     success_url = reverse_lazy('post_list')
 
     def test_func(self):
@@ -168,7 +168,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    template_name = 'artoon2d_blog/post_confirm_delete.html'
+    template_name = 'artoon5d_blog/post_confirm_delete.html'
     success_url = reverse_lazy('post_list')
 
     def test_func(self):
@@ -206,7 +206,7 @@ def home(request):
 
     recent_posts = Post.objects.order_by('-created_at')[:5]
 
-    return render(request, 'artoon2d_blog/home.html', {
+    return render(request, 'artoon5d_blog/home.html', {
         'posts': posts,
         'recent_posts': recent_posts,
         'visitor_count': counter.total_visits,
@@ -299,7 +299,7 @@ def user_profile(request, user_id):
         ).exists()
     )
 
-    return render(request, 'artoon2d_blog/user_profile.html', {
+    return render(request, 'artoon5d_blog/user_profile.html', {
         'user_profile': user,
         'profile': profile,
         'posts': posts,
@@ -313,4 +313,4 @@ def user_profile(request, user_id):
 # Static Pages
 # ---------------------------------------------------------------------
 def about_view(request):
-    return render(request, 'artoon2d_blog/about.html')
+    return render(request, 'artoon5d_blog/about.html')

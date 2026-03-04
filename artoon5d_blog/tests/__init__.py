@@ -1,1 +1,1 @@
-default_app_config = 'artoon2d_blog.apps.Artoon2DBlogConfig'
+default_app_config = 'artoon5d_blog.apps.Artoon5DBlogConfig'

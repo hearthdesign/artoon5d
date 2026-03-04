@@ -9,7 +9,7 @@ db.sqlite3
 
 
 # Virtualenv
-artoon2d_env/
+artoon5d_env/
 venv/
 
 # IDEs

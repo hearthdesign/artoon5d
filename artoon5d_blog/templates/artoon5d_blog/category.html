@@ -1,12 +1,12 @@
-{% extends 'artoon2d_blog/base.html' %}
+{% extends 'artoon5d_blog/base.html' %}
 
 {% block title %}
-{{ category.name }} | Artoon2d Blog
+{{ category.name }} | Artoon5D Blog
 {% endblock %}
 
 {% block seo %}
 <link rel="canonical" href="{{ request.build_absolute_uri }}">
-<meta name="description" content="Posts filed under {{ category.name }} on Artoon2d Blog.">
+<meta name="description" content="Posts filed under {{ category.name }} on Artoon5D Blog.">
 
 <meta property="og:title" content="{{ category.name }}">
 <meta property="og:description" content="Browse posts in {{ category.name }}.">
@@ -15,8 +15,7 @@
 
 {% block content %}
   {# Sidebar with recent posts #}
-  <div class="sidebar-div">{% include 'artoon2d_blog/sidebar.html' %}</div>
-
+  <div class="sidebar-div">{% include 'artoon5d_blog/sidebar.html' %}</div>
   <h1>Category: {{ category.name }}</h1>
 
   <div class="category-posts">

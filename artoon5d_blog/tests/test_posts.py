@@ -1,6 +1,6 @@
 import pytest
 from django.contrib.auth.models import User
-from artoon2d_blog.models import Post
+from artoon5d_blog.models import Post
 
 @pytest.mark.django_db
 def test_post_creation():

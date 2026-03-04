@@ -1,6 +1,6 @@
-﻿# ARTOON2D
-## Project: Artoon2D Blog Platform 
-Welcome to **Artoon2D Blog**, a creative space built with Django for sharing artistic inspiration, tutorials, and resources for curious children and their parents. This blog is designed to be fun, educational, and community-driven.
+﻿# ARTOON5D
+## Project: Artoon5D Blog Platform 
+Welcome to **Artoon5D Blog**, a creative space built with Django for sharing artistic inspiration, tutorials, and resources for curious children and their parents. This blog is designed to be fun, educational, and community-driven.
 A blogging platform with social interaction (likes, follows), media support, and author-controlled content.
 ---
 ## User Stories
@@ -91,21 +91,21 @@ The typography complements this approach with Comic Sans MS, using uppercase hea
 ### Project Structure
 
 ```text
-artoon2d/
+artoon5d/
 ├── manage.py
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 ├── README.md
 │
-├── artoon2d/                     # Django project (settings)
+├── artoon5d/                     # Django project (settings)
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
 │
-├── artoon2d_blog/                # Django app
+├── artoon5d_blog/                # Django app
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
@@ -160,7 +160,7 @@ The testing strategy intentionally combines Django’s built-in test framework a
 
 ### Test Structure
 ```text
-artoon2d_blog/
+artoon5d_blog/
 └── tests/
     ├── __init__.py
     ├── test_posts.py     # Model-level tests (pytest)
@@ -210,7 +210,7 @@ The production setup uses:
 
 ### Local Development Setup
 Clone the repository
-git clone https://[https://github.com/hearthdesign/artoon2d]
+git clone https://[https://github.com/hearthdesign/artoon5d]
 cd your-repo
 
 ### Create and activate a virtual environment

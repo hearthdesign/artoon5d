@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /accounts/
 
 # Sitemap location
-Sitemap: https://artoon2d-ad3b8f5dfe58.herokuapp.com/sitemap.xml
+Sitemap: https://artoon5d-ad3b8f5dfe58.herokuapp.com/sitemap.xml

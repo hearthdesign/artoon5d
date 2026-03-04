@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django.urls import reverse
-from artoon2d_blog.models import Post
+from artoon5d_blog.models import Post
 
 class PostDeleteTests(TestCase):
 

@@ -1,4 +1,4 @@
-{% extends 'artoon2d_blog/base.html' %}
+{% extends 'artoon5d_blog/base.html' %}
 {% load static %}
 {% load cloudinary %}
 
@@ -18,7 +18,7 @@
 
 {% block content %}
 <!-- include Like button -->
-{% include "artoon2d_blog/components/like_button.html" %}
+{% include "artoon5d_blog/components/like_button.html" %}
 
 <article class="post-detail">
     <h2>{{ post.title }}</h2>
@@ -31,7 +31,7 @@
     <p><em>{{ post.created_at|timesince }} ago</em></p>
 
     {# Follow button include #}
-    {% include 'artoon2d_blog/components/follow_button.html'
+    {% include 'artoon5d_blog/components/follow_button.html'
         with target_user=post.author.profile
         is_following=user.profile.is_following(post.author.profile)
         follower_count=post.author.profile.follower_count %}

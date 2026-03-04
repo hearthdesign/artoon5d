@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from artoon2d_blog.models import Profile, Follow
+from artoon5d_blog.models import Profile, Follow
 
 class FollowToggleTests(TestCase):
 
