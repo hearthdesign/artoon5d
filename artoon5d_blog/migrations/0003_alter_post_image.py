@@ -7,7 +7,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('artoon2d_blog', '0002_alter_visitorcounter_options'),
+        ('artoon5d_blog', '0002_alter_visitorcounter_options'),
     ]
 
     operations = [

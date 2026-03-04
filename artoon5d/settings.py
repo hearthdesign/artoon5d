@@ -35,8 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'artoon2d_blog',
-    'artoon2d_blog.apps.Artoon2DBlogConfig',
+    # 'artoon5d_blog',
+    'artoon5d_blog.apps.Artoon5DBlogConfig',
     'taggit',
     'cloudinary', 
     'cloudinary_storage',
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
-ROOT_URLCONF = 'artoon2d.urls'
+ROOT_URLCONF = 'artoon5d.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'artoon2d_blog.context_processors.visitor_count',
+                'artoon5d_blog.context_processors.visitor_count',
             ],
         },
     },

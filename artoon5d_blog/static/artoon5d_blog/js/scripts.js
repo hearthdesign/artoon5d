@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => { 
   /* ========================= 
-  CAROUSEL (SAFE) ========================= */ 
+          CAROUSEL
+  ========================= */ 
   const track = document.querySelector('.carousel-track'); 
   const nextBtn = document.querySelector('.carousel-btn.next'); 
   const prevBtn = document.querySelector('.carousel-btn.prev'); 

@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
-from artoon2d_blog.sitemaps import PostSitemap, CategorySitemap, StaticViewSitemap
+from artoon5d_blog.sitemaps import PostSitemap, CategorySitemap, StaticViewSitemap
 from django.views.generic import TemplateView
 
 sitemaps = {
@@ -19,7 +19,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
 
     # Include all blog app URLs
-    path('', include('artoon2d_blog.urls')),
+    path('', include('artoon5d_blog.urls')),
 ]
 
 # -------------------------------------------
@@ -30,7 +30,7 @@ urlpatterns += [
     path(
         "robots.txt",
         TemplateView.as_view(
-            template_name="artoon2d_blog/robots.txt",
+            template_name="artoon5d_blog/robots.txt",
             content_type="text/plain",
         ),
     ),
