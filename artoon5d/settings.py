@@ -15,7 +15,6 @@ load_dotenv()  # reads the .env file
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -133,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'artoon2d_blog' / 'static',
+    BASE_DIR / 'artoon5d_blog' / 'static',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Use WhiteNoise to serve static files with compression and caching support
@@ -150,7 +149,7 @@ CLOUDINARY_STORAGE = {
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-WSGI_APPLICATION = 'artoon2d.wsgi.application'
+WSGI_APPLICATION = 'artoon5d.wsgi.application'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -177,35 +176,31 @@ SITE_URL = config(
 # For both local development and production (Heroku Upstash Redis)
 # ======================
 
-# REDIS_URL = config("REDIS_URL", default=None)
+REDIS_URL = config("REDIS_URL", default=None)
 
-# if not DEBUG and REDIS_URL:
-#     # Production (Heroku / Upstash)
-#     CACHES = {
-#         "default": {
-#             "BACKEND": "django_redis.cache.RedisCache",
-#             "LOCATION": REDIS_URL,
-#             "OPTIONS": {
-#                 "CLIENT_CLASS": "django_redis.client.DefaultClient",
-#             },
-#             "TIMEOUT": 60 * 15,
-#         }
-#     }
-# else:
-#     # Local development (NO Redis required)
-#     CACHES = {
-#         "default": {
-#             "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-#         }
-#     }
-
-# SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-# SESSION_CACHE_ALIAS = "default"
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+if not DEBUG and REDIS_URL:
+    # Production (Heroku / Upstash)
+    CACHES = {
+        "default": {
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": REDIS_URL,
+            "OPTIONS": {
+                "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            },
+            "TIMEOUT": 60 * 15,
+        }
     }
-}
+else:
+    # Local development (NO Redis required)
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        }
+    }
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
